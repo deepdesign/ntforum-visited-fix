@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "ntforum.net Visited Links Fix",
+  "version": "1.0.0",
+  "description": "Marks ntforum.net threads as visited when you click them, working around the site's in-page thread expansion not triggering a real navigation for Chrome to track.",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://ntforum.net/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
